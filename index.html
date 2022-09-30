@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<section>
+    
+    <section class="hero">
+        <div class="main-width">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-m"></i>
+                    <i class="fa-sharp fa-solid fa-r"></i>
+                    <i class="fa-solid fa-e"></i>
+                    <i class="fa-solid fa-p"></i>
+                </div>
+
+                <nav>
+                    <div class="hamb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li class="btn"><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container" id="header">
+                <div class="hero-text">
+                    <h3>Hi, There!</h3>
+                    <h1>I am <span class="input"></span></h1>
+                    <p>Aspiring Front-end Developer</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/raniel.perez.14" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <button type="button">More About Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/profile1.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p style="font-size: 20px">I'm currently a student at Batangas State university studying Business Analytics under Information Technology.<br><br>I was born in San Juan, Batangas, and grew up with a strong interest in technology. I'm easily inspired by people from unique places and my own experiences outside of work.<br><br>If you'd like to chat or challenge me to a friendly game of basketball, let me know!</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Hobbies')">Hobbies</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Hobbies">
+                            <ul>
+                                <li>Playing Basketball.</li>
+                                <li>Playing Online Games.</li>
+                                <li>Watching Anime.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2022 - Present</span><br>I am currently 3rd year college student at Batangas State University Alangilan Campus taking Bachelor of Science in Information Technology Major in Business Analytics.</li>
+                                <li><span>2019-2020 - Senior High School</span><br> I graduated in Batangas Eastern Colleges.</li>
+                                <li><span>2017-2018 - Junior High School</span><br> I graduated in Batangas Eastern Colleges.</li>
+                                <li><span>2013-2014 - Grade School</span><br> I graduated in Buhaynasapa Elementary School.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="Images/background1.mp4" type="video/mp4">
+    </video>
+    <section>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-paper-plane"></i> perezmarkraniel@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i> 09389524507</p>
+
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>© 2022 Mark Raniel - All Right Preserved.</p>
+        </div>
+    </section>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".input", {
+            strings:["Mark Raniel Perez.","IT Student."], 
+            typeSpeed: 70,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+
+                
+</body>
+</html>
